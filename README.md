@@ -1,2 +1,1 @@
-# linting-javascript
-linting javascript
+# Linting Javascript
