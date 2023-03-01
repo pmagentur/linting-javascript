@@ -1,0 +1,24 @@
+name: Javascript Linting
+id: 'ari:cloud:compass:fc30d626-c7c8-44e4-9b1c-e1cc1894dd1e:component/f75966b7-3ca1-4049-bdb7-40fe65ef2a2a/fc5fd19a-e488-495e-8f25-bda1b8ad4207'
+description: This is the linting for all our Javascript Projects
+configVersion: 1
+ownerId: 'ari:cloud:teams::team/f4015c13-0008-4222-b292-b0e00807b2cd'
+fields:
+  tier: 3
+  lifecycle: Pre-release
+links:
+  - name: null
+    type: REPOSITORY
+    url: 'https://github.com/pmagentur/linting-javascript'
+  - name: Confluence
+    type: DOCUMENT
+    url: 'https://pmsoftware.atlassian.net/wiki/spaces/EN/pages/3625025551/Typescript'
+  - name: Slack
+    type: CHAT_CHANNEL
+    url: 'https://app.slack.com/client/T0G2FAWMR/C04NXD0Q1FA'
+relationships:
+  DEPENDS_ON:
+    - 'ari:cloud:compass:fc30d626-c7c8-44e4-9b1c-e1cc1894dd1e:component/f75966b7-3ca1-4049-bdb7-40fe65ef2a2a/718825c8-9a3b-477c-b9a4-9a12a40173ef'
+
+# Learn more about formatting compass.yml:
+# https://go.atlassian.com/compass-yml-format
