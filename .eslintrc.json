@@ -1,0 +1,86 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/*.ts"
+      ],
+      "rules": {
+        "@typescript-eslint/typedef": [
+          "error",
+          {
+            "variableDeclaration": true
+          }
+        ]
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    //code style removed
+    "object-curly-spacing": "off",
+    "indent": "off",
+    "padded-blocks": "off",
+    "brace-style": "off",
+    "block-spacing": "off",
+    "no-multiple-empty-lines": "off",
+    "spaced-comment": "off",
+    "space-before-blocks": "off",
+    "keyword-spacing": "off",
+    "comma-spacing": "off",
+    "operator-linebreak": "off",
+    "no-trailing-spaces": "off",
+
+    //override recommended
+    "max-len": [
+      "error",
+      {
+        "code":  100,
+        "ignorePattern": "^\\s?import.*from.*;"
+      }
+    ],
+    "max-depth": [
+      "error",
+      3
+    ],
+    "max-statements": [
+      "error",
+      12
+    ],
+    "max-lines": [
+      "error",
+      400
+    ],
+    "complexity": [
+      "error",
+      7
+    ],
+    "no-console": "error",
+    "comma-dangle": "off",
+    "one-var": "off",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "object": "Do not use general types",
+          "Object": "Do not use general types",
+          "any": "Do not use general types",
+          "unknown": "Do not use general types"
+        }
+      }
+    ]
+  }
+}
