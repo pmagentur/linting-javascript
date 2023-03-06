@@ -1,0 +1,52 @@
+name: Pull Request checks
+
+on:
+  workflow_call:
+    inputs:
+      configs-path:
+        description: 'Set this to override the linting configs with the ones in this folder. 
+        The structure inside of the folder must be the same as the one in this repository.'
+        required: false
+        type: string
+        default: '._linting' # Use the configs from this repository (separate checkout)
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    name: eslint
+    steps:
+      - name: Checkout the commit
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changedFiles
+        uses: tj-actions/changed-files@v34
+        with:
+          sha: ${{ github.event.pull_request.head.sha }}
+          base_sha: ${{ github.event.pull_request.base.sha }}
+
+      # Needed to have access to the linter files
+      - name: Checkout this repository
+        uses: actions/checkout@v3
+        with:
+          repository: pmagentur/linting-javascript
+          path: ._linting
+
+      - name: Linting with eslint
+        id: linter
+        uses: pmagentur/linting-action@v0.2
+        with:
+          changed-files: ${{ steps.changedFiles.outputs.all_changed_files }}
+          linter-command: "eslint -c ${{ inputs.configs-path }}/eslint/.eslintrc.json {files} -f unix"
+          parse-pattern: '(?<file>[^:]+):(?<line>\d+)(?::(?<column>\d+))?: (?<message>.+) \[(?<level>[^\/]+)\/(?<ruleName>[^\]]+)\]'
+          relevant-file-endings: '["js", "ts"]'
+
+      - name: Add Annotations
+        uses: pmagentur/linting-annotations@v0.1
+        if: failure() && steps.linter.outputs.annotations != ''
+        with:
+          commitSha: ${{ github.event.pull_request.head.sha }}
+          checkName: 'JavaScript Linting'
+          annotations: ${{ steps.linter.outputs.annotations }}
