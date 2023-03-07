@@ -34,20 +34,12 @@ jobs:
           repository: pmagentur/linting-javascript
           path: ._linting
 
-      # Setup node packages required for linter step
-      - name: Node CI
-        id: nodeCI
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-      - run: npm ci
-
       - name: Linting with eslint
         id: linter
         uses: pmagentur/linting-action@v0.2
         with:
           changed-files: ${{ steps.changedFiles.outputs.all_changed_files }}
-          linter-command: "eslint -c ${{ inputs.configs-path }}/eslint/.eslintrc.json {files} -f unix"
+          linter-command: "._linting/dist/eslint.js -c ${{ inputs.configs-path }}/eslint/.eslintrc.json {files} -f unix"
           parse-pattern: '(?<file>[^:]+):(?<line>\d+)(?::(?<column>\d+))?: (?<message>.+) \[(?<level>[^\/]+)\/(?<ruleName>[^\]]+)\]'
           relevant-file-endings: '["js", "ts"]'
 

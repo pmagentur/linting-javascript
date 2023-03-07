@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "requirements for linting js",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pmagentur/linting-javascript.git"
