@@ -40,14 +40,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-      - run: npm --prefix ._linting ci
+      - run: npm install --prefix ._linting
 
       - name: Linting with eslint
         id: linter
         uses: pmagentur/linting-action@v0.2
         with:
           changed-files: ${{ steps.changedFiles.outputs.all_changed_files }}
-          linter-command: "$(npm bin)/eslint -c ${{ inputs.configs-path }}/.eslintrc.json {files} -f unix"
+          linter-command: "npx eslint -c ${{ inputs.configs-path }}/.eslintrc.json {files} -f unix"
           parse-pattern: '(?<file>[^:]+):(?<line>\d+)(?::(?<column>\d+))?: (?<message>.+) \[(?<level>[^\/]+)\/(?<ruleName>[^\]]+)\]'
           relevant-file-endings: '["js", "ts"]'
 
