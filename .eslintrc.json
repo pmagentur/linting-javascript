@@ -3,6 +3,10 @@
         "browser": true,
         "es2021": true
     },
+    "globals": {
+        //define accepted global vars that are not accepted by env settings
+        "abp": true
+    },
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended"
