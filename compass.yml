@@ -1,4 +1,4 @@
-name: Javascript Linting
+name: Javascript and Typescript Linting
 id: 'ari:cloud:compass:fc30d626-c7c8-44e4-9b1c-e1cc1894dd1e:component/f75966b7-3ca1-4049-bdb7-40fe65ef2a2a/fc5fd19a-e488-495e-8f25-bda1b8ad4207'
 description: This is the linting for all our Javascript Projects
 configVersion: 1
