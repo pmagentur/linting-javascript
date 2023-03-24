@@ -79,7 +79,6 @@
         "no-eval": "error",
         "prefer-object-spread": "error",
         "@typescript-eslint/no-this-alias": "warn",
-        "no-undef": "warn",
         "complexity": ["error", 5],
 
         //override recommended
