@@ -19,6 +19,5 @@ links:
 relationships:
   DEPENDS_ON:
     - 'ari:cloud:compass:fc30d626-c7c8-44e4-9b1c-e1cc1894dd1e:component/f75966b7-3ca1-4049-bdb7-40fe65ef2a2a/718825c8-9a3b-477c-b9a4-9a12a40173ef'
-
-# Learn more about formatting compass.yml:
-# https://go.atlassian.com/compass-yml-format
+    - 'ari:cloud:compass:fc30d626-c7c8-44e4-9b1c-e1cc1894dd1e:component/f75966b7-3ca1-4049-bdb7-40fe65ef2a2a/53c4c706-bccc-47b5-bf3c-b5ec5a222fbf'
+    - 'ari:cloud:compass:fc30d626-c7c8-44e4-9b1c-e1cc1894dd1e:component/f75966b7-3ca1-4049-bdb7-40fe65ef2a2a/1cb60f02-9927-4f51-975c-a12834185e20'
