@@ -58,7 +58,7 @@
         "constructor-super": "error",
         "no-sparse-arrays": "error",
         "camelcase": "error",
-        "id-length": ["error", { "min": 3 , "exceptions": ["me", "$"]}],
+        "id-length": ["error", { "min": 3 , "exceptions": ["me", "$", "_", "cn"]}],
         "id-denylist": ["error", "data", "callback", "foo", "bar", "params"],
         "max-depth": ["error", 3],
         "no-console": "error",
