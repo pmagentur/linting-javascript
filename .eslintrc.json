@@ -80,6 +80,7 @@
         "prefer-object-spread": "error",
         "@typescript-eslint/no-this-alias": "warn",
         "complexity": ["error", 5],
+        "@typescript-eslint/no-inferrable-types": "off",
 
         //override recommended
         "max-len": [
