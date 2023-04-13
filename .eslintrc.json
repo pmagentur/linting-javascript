@@ -1,107 +1,106 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "jquery": true
-    },
-    "globals": {
-        //define accepted global vars that are not accepted by env settings
-        "abp": true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
-    ],
-    "ignorePatterns": [
-        ".eslintrc.js"
-    ],
-    "overrides": [
-        {
-            "files": [
-                "**/*.ts"
-            ],
-            "rules": {
-                "@typescript-eslint/typedef": [
-                    "error",
-                    {
-                        "variableDeclaration": true
-                    }
-                ]
-            }
-        }
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": "latest"
-    },
-    "plugins": [
-        "@typescript-eslint"
-    ],
-    "rules": {
-        //code style removed
-        "object-curly-spacing": "off",
-        "indent": "off",
-        "padded-blocks": "off",
-        "brace-style": "off",
-        "block-spacing": "off",
-        "no-multiple-empty-lines": "off",
-        "spaced-comment": "off",
-        "space-before-blocks": "off",
-        "keyword-spacing": "off",
-        "comma-spacing": "off",
-        "operator-linebreak": "off",
-        "no-trailing-spaces": "off",
-
-        "max-lines-per-function": ["error", 40],
-        "max-lines": ["error", {"max": 350, "skipBlankLines": true}],
-        "max-params": ["error", 6],
-        "constructor-super": "error",
-        "no-sparse-arrays": "error",
-        "camelcase": "error",
-        "id-length": ["error", { "min": 3 , "exceptions": ["me", "$", "_", "cn"]}],
-        "id-denylist": ["error", "data", "callback", "foo", "bar", "params"],
-        "max-depth": ["error", 3],
-        "no-console": "error",
-        "eqeqeq": "error",
-        "no-magic-numbers": ["error", { "ignore": [-1, 0, 1, 100] }],
-        "no-param-reassign": "error",
-        "no-shadow": "error",
-        "no-var": "error",
-        "prefer-arrow-callback": "error",
-        "prefer-destructuring": ["error", {
-            "array": false,
-            "object": true
-          }, {
-            "enforceForRenamedProperties": false
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jquery": true
+  },
+  "globals": {
+    "abp": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "ignorePatterns": [
+    ".eslintrc.js"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/*.ts"
+      ],
+      "rules": {
+        "@typescript-eslint/typedef": [
+          "error",
+          {
+            "variableDeclaration": true
           }
-        ],
-        "strict": ["error", "global"],
-        "no-eval": "error",
-        "prefer-object-spread": "error",
-        "@typescript-eslint/no-this-alias": "warn",
-        "complexity": ["error", 5],
-        "@typescript-eslint/no-inferrable-types": "off",
-
-        //override recommended
-        "max-len": [
-            "error",
-            {
-                "code":  200,
-                "ignorePattern": "^\\s?import.*from.*;"
-            }
-        ],
-        "comma-dangle": "off",
-        "one-var": "off",
-        "@typescript-eslint/ban-types": [
-            "error",
-            {
-                "types": {
-                    "object": "Do not use general types",
-                    "Object": "Do not use general types",
-                    "any": "Do not use general types",
-                    "unknown": "Do not use general types"
-                }
-            }
         ]
+      }
     }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "object-curly-spacing": "off",
+    "indent": "off",
+    "padded-blocks": "off",
+    "brace-style": "off",
+    "block-spacing": "off",
+    "no-multiple-empty-lines": "off",
+    "spaced-comment": "off",
+    "space-before-blocks": "off",
+    "keyword-spacing": "off",
+    "comma-spacing": "off",
+    "operator-linebreak": "off",
+    "no-trailing-spaces": "off",
+
+    "max-lines-per-function": ["error", 40],
+    "max-lines": ["error", {"max": 350, "skipBlankLines": true}],
+    "max-params": ["error", 6],
+    "constructor-super": "error",
+    "no-sparse-arrays": "error",
+    "camelcase": "error",
+    "id-length": ["error", { "min": 3 , "exceptions": ["me", "$", "_", "cn", "Cn"]}],
+    "id-denylist": ["error", "data", "callback", "foo", "bar", "params"],
+    "max-depth": ["error", 3],
+    "no-console": "error",
+    "eqeqeq": "error",
+    "no-magic-numbers": ["error", { "ignore": [-1, 0, 1, 100] }],
+    "no-param-reassign": "error",
+    "no-shadow": "error",
+    "no-var": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-destructuring": ["error", {
+      "array": false,
+      "object": true
+    }, {
+      "enforceForRenamedProperties": false
+    }
+    ],
+    "strict": ["error", "global"],
+    "no-eval": "error",
+    "prefer-object-spread": "error",
+    "@typescript-eslint/no-this-alias": "warn",
+    "complexity": ["error", 5],
+    "@typescript-eslint/no-inferrable-types": "off",
+    "no-unused-vars": ["error", { "varsIgnorePattern": "[Component]" }],
+
+    "max-len": [
+      "error",
+      {
+        "code":  200,
+        "ignorePattern": "^\\s?import.*from.*;"
+      }
+    ],
+    "comma-dangle": "off",
+    "one-var": "off",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "object": "Do not use general types",
+          "Object": "Do not use general types",
+          "any": "Do not use general types",
+          "unknown": "Do not use general types",
+          "undefined": "Do not use general types"
+        }
+      }
+    ]
+  }
 }
