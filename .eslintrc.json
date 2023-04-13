@@ -84,7 +84,7 @@
     "max-len": [
       "error",
       {
-        "code":  200,
+        "code":  250,
         "ignorePattern": "^\\s?import.*from.*;"
       }
     ],
