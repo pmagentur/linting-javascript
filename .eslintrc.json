@@ -80,7 +80,6 @@
     "@typescript-eslint/no-this-alias": "warn",
     "complexity": ["error", 5],
     "@typescript-eslint/no-inferrable-types": "off",
-    "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
