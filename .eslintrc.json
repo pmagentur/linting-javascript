@@ -81,7 +81,14 @@
     "complexity": ["error", 5],
     "@typescript-eslint/no-inferrable-types": "off",
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["error", { "varsIgnorePattern": "[Component]" }],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],  
 
     "max-len": [
       "error",
