@@ -15,7 +15,8 @@
   },
   "homepage": "https://github.com/pmagentur/linting-javascript#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.54.1",
-    "eslint": "^8.35.0"
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint": "^8.38.0"
   }
 }
