@@ -87,7 +87,7 @@
         "varsIgnorePattern": "^_",
         "caughtErrorsIgnorePattern": "^_"
       }
-    ],  
+    ],
 
     "max-len": [
       "error",
@@ -109,6 +109,13 @@
           "undefined": "Do not use general types"
         }
       }
-    ]
+    ],
+
+    "object-curly-newline": ["error", {
+      "ObjectExpression": "always",
+      "ObjectPattern": { "multiline": true },
+      "ImportDeclaration": "always",
+      "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+    }]
   }
 }
