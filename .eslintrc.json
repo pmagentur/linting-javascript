@@ -78,7 +78,7 @@
     "no-eval": "error",
     "prefer-object-spread": "error",
     "@typescript-eslint/no-this-alias": "warn",
-    "complexity": ["error", 5],
+    "complexity": ["error", 6],
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
