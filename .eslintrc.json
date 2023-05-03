@@ -105,8 +105,7 @@
           "object": "Do not use general types",
           "Object": "Do not use general types",
           "any": "Do not use general types",
-          "unknown": "Do not use general types",
-          "undefined": "Do not use general types"
+          "unknown": "Do not use general types"
         }
       }
     ],
