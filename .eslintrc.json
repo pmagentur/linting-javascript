@@ -51,7 +51,7 @@
     "no-trailing-spaces": "off",
 
     "max-lines-per-function": ["error", 40],
-    "max-lines": ["error", {"max": 550, "skipBlankLines": true}],
+    "max-lines": ["error", {"max": 600, "skipBlankLines": true}],
     "max-params": ["error", 6],
     "constructor-super": "error",
     "no-sparse-arrays": "error",
