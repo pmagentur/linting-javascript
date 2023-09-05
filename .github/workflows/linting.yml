@@ -47,7 +47,7 @@ jobs:
         uses: pmagentur/linting-action@v0.2
         with:
           changed-files: ${{ steps.changedFiles.outputs.all_changed_files }}
-          linter-command: "._linting/node_modules/.bin/eslint -c ${{ inputs.configs-path }}/.eslintrc.json {files} -f unix --no-eslintrc"
+          linter-command: "._linting/node_modules/.bin/eslint -c ${{ inputs.configs-path }}/.eslintrc.json {files} -f unix --no-eslintrc --quiet"
           parse-pattern: '(?<file>[^:]+):(?<line>\d+)(?::(?<column>\d+))?: (?<message>.+) \[(?<level>[^\/]+)\/(?<ruleName>[^\]]+)\]'
           relevant-file-endings: '["js", "ts"]'
 
