@@ -38,7 +38,7 @@
   ],
   "rules": {
     "object-curly-spacing": "off",
-    "indent": ["warn", "tab"],
+    "indent": ["warn", 2],
     "no-mixed-spaces-and-tabs": "off",
     "padded-blocks": "off",
     "brace-style": "off",
