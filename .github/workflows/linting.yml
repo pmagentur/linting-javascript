@@ -9,6 +9,11 @@ on:
         required: false
         type: string
         default: '._linting' # Use the configs from this repository (separate checkout)
+      excluded-directories:
+        description: 'List of directories to exclude (JSON), empty = none'
+        required: false
+        type: string
+        default: '[]'
 
 jobs:
   eslint:
@@ -44,12 +49,13 @@ jobs:
 
       - name: Linting with eslint
         id: linter
-        uses: pmagentur/linting-action@v0.2
+        uses: pmagentur/linting-action@v0.4
         with:
           changed-files: ${{ steps.changedFiles.outputs.all_changed_files }}
           linter-command: "._linting/node_modules/.bin/eslint -c ${{ inputs.configs-path }}/.eslintrc.json {files} -f unix --no-eslintrc --quiet"
           parse-pattern: '(?<file>[^:]+):(?<line>\d+)(?::(?<column>\d+))?: (?<message>.+) \[(?<level>[^\/]+)\/(?<ruleName>[^\]]+)\]'
           relevant-file-endings: '["js", "ts"]'
+          excluded-directories: ${{ inputs.excluded-directories }}
 
       - name: Add Annotations
         uses: pmagentur/linting-annotations@v0.1
