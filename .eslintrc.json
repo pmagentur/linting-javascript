@@ -37,6 +37,7 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "@typescript-eslint/no-explicit-any": "error",
     "object-curly-spacing": "off",
     "indent": ["warn", 2],
     "no-mixed-spaces-and-tabs": "off",
