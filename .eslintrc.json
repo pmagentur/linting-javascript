@@ -113,9 +113,9 @@
     ],
 
     "object-curly-newline": ["error", {
-      "ObjectExpression": "always",
+      "ObjectExpression": { "consistent": true, "minProperties": 1 },
       "ObjectPattern": { "multiline": true },
-      "ImportDeclaration": "always",
+      "ImportDeclaration": { "consistent": true, "minProperties": 3 },
       "ExportDeclaration": { "multiline": true, "minProperties": 3 }
     }]
   }
