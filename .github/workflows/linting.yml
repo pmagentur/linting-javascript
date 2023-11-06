@@ -37,6 +37,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: pmagentur/linting-javascript
+          ref: master
           path: ._linting
 
       # Setup node packages required for linter step
