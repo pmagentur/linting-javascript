@@ -90,7 +90,7 @@
         "caughtErrorsIgnorePattern": "^_"
       }
     ],
-    "quotes": ["warn", "single"],
+    "quotes": ["error", "single"],
     "max-len": [
       "error",
       {
