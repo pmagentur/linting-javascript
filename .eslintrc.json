@@ -39,7 +39,7 @@
   "rules": {
     "@typescript-eslint/no-explicit-any": "error",
     "object-curly-spacing": "off",
-    "indent": ["warn", 2, { "ignoredNodes": ["PropertyDefinition"] }],
+    "indent": ["warn", 2, { "ignoredNodes": ["PropertyDefinition", "ConditionalExpression"] }],
     "no-mixed-spaces-and-tabs": "off",
     "padded-blocks": "off",
     "brace-style": "off",
