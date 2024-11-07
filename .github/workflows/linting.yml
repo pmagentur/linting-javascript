@@ -50,7 +50,7 @@ jobs:
 
       - name: Linting with eslint
         id: linter
-        uses: pmagentur/linting-action@v0.4
+        uses: pmagentur/linting-action@v0.4.1
         with:
           changed-files: ${{ steps.changedFiles.outputs.all_changed_files }}
           linter-command: "._linting/node_modules/.bin/eslint -c ${{ inputs.configs-path }}/.eslintrc.json {files} -f unix --no-eslintrc --quiet"
